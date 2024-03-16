@@ -9,7 +9,7 @@ router.post('/forgot-password', requestPasswordReset)
 router.post('/reset-password/:token', resetPassword)
 router.get('/reset-password/:token', (req, res) => {
     const { token } = req.params;
-    res.redirect(`https://day-41-task-be.onrender.com/reset-password/${token}`);
+    res.redirect(`https://splendorous-scone-1a65e6.netlify.app/api/user/reset-password/${token}`);
 });
 
 export default router;
