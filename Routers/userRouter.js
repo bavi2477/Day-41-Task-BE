@@ -7,9 +7,9 @@ router.post('/register', registerUser)
 router.post('/login', loginUser)
 router.post('/forgot-password', requestPasswordReset)
 router.post('/reset-password/:token', resetPassword)
-router.get('/reset-password/:token', (req, res) => {
+router.get('/redirect-reset-password/:token', (req, res) => {
     const { token } = req.params;
-    res.redirect(`http://localhost:5173/reset-password/${token}`);
+    res.redirect(`https://day-41-task-be.onrender.com/reset-password/${token}`);
 });
 
 export default router;
