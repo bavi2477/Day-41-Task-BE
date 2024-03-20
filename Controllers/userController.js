@@ -57,7 +57,7 @@ export const requestPasswordReset = async (req, res) => {
         user.resetToken = resetToken;
         await user.save();
 
-        const resetLink = `https://day-41-task-be.onrender.com/api/user/reset-password/${resetToken}`;
+        const resetLink = `https://password-reset-bavi.netlify.app/reset-password/${resetToken}`;
         await mail(email, 'Password Reset Request', `Click this link to reset your password: ${resetLink}`);
 
         res.status(200).json({ message: "Check your mail for the reset link" });
